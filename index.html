@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get YouTube Thumbnail</title>
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="https://developergtm.in/wp-content/uploads/2024/04/Screenshot-2024-04-24-172236-1024x498.png 1024w, https://developergtm.in/wp-content/uploads/2024/04/Screenshot-2024-04-24-172236-1200x583.png 1200w, https://developergtm.in/wp-content/uploads/2024/04/Screenshot-2024-04-24-172236.png 1271w"
+      imagesizes="(max-width: 749px) 100vw, 749px"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="https://developergtm.in/wp-content/themes/smart-mag/css/icons/fonts/ts-icons.woff2?v2.8"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <body>
+    <div class="main fw-light">
+      <header>
+        <h4 class="display-6 lh-1 text-white">🖼 Get YouTube Thumbnail</h4>
+      </header>
+      <hr />
+      <label for="url" class="form-label small text-white"
+        >Enter YouTube video URL (supports .be, shorts, embed, with timestamps
+        and other clutter)</label
+      >
+      <input
+        name="url"
+        type="search"
+        id="url"
+        class="form-control fw-light"
+        onfocus="if(this.value == 'https://youtu.be/i2xxhRTs5Uc?si=xCH2u93dVzoUWkKR') { this.value = ''; }"
+        onblur="if(this.value == '') { this.value = 'https://youtu.be/i2xxhRTs5Uc?si=xCH2u93dVzoUWkKR'; }"
+        value="https://youtu.be/i2xxhRTs5Uc?si=xCH2u93dVzoUWkKR"
+      />
+      <div class="buttons">
+        <button class="btn btn-primary fw-light" onclick="dynamicUrl(0)">
+          👁‍🗨 Get 🖼
+        </button>
+        <button class="btn btn-info fw-light" onclick="dynamicUrl(1)">
+          👀 Get Max 🖼
+        </button>
+        <button class="btn btn-success fw-light" onclick="download()">
+          ⏬ Download
+        </button>
+      </div>
+
+      <img
+        decoding="async"
+        class="center-fit"
+        id="img"
+        onclick="fullPage()"
+        title="Click to zoom in/out"
+        src="https://cdn.pixabay.com/photo/2016/01/29/09/58/hands-1167622_640.jpg"
+      />
+      <footer>
+        <a
+          class="text-decoration-none"
+          href="https://www.linkedin.com/in/abhigyan-shrivastava-8aa537226/"
+          target="_blank">CodeZCluB.in</a>
+        <div class="copyright">
+            <p>Create By <a href="">ABHIGYAN SHRIVASTAVA</a> | All Right Reserved.</p>
+          </div>
+      </footer>
+    </div>
+    <div
+      id="fullpage"
+      title="Click to zoom in/out"
+      onclick="this.style.display='none';"
+    ></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
